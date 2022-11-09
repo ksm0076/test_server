@@ -17,3 +17,5 @@ package.json
 
 package-lock.json
 .viminfo
+
+.gitconfig
