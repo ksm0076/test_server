@@ -12,7 +12,7 @@ try {
   console.error(err);
 }
 
-console.log(token);
+// console.log(token);
 
 token = token.replace(/\n/g, '');
 
@@ -26,7 +26,7 @@ rtm.on('message', (message) => {
   const { channel } = message;
   const { text } = message;
 
-  if (!Number.isNaN(text)) {
+  if (!isNaN(text)) {
     square(rtm, text, channel);
   } else {
     switch (text) {
