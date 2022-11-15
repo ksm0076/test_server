@@ -7,7 +7,6 @@ package.json
 .bash_history
 .bashrc
 .cache/
-.eslintrc.js
 .npm/
 .profile
 .selected_editor
