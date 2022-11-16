@@ -13,5 +13,19 @@
   "scripts": {
     "prepare": "husky install",
     "test": "mocha ./hello.spec.js"
-  }
+  },
+  "name": "ksm-server",
+  "version": "1.0.0",
+  "description": "test-server",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksm0076/test_server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksm0076/test_server/issues"
+  },
+  "homepage": "https://github.com/ksm0076/test_server#readme"
 }
