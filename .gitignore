@@ -12,7 +12,6 @@ node_modules
 .vim/
 .viminf
 
-package-lock.json
 .viminfo
 
 .gitconfig
