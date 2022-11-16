@@ -1,8 +1,6 @@
 token
 
 node_modules
-pacakage-lock.json
-package.json
 
 .bash_history
 .bashrc

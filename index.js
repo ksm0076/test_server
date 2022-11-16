@@ -33,8 +33,12 @@ rtm.on('message', (message) => {
       case 'hi':
         greeting(rtm, channel);
         break;
+      case 'bye':
+        rtm.sendMessage('bye~ bye~', channel);
+        break;
       default:
         rtm.sendMessage('I am alive~', channel);
+        break;
     }
   }
 });
