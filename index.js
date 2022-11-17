@@ -35,6 +35,8 @@ rtm.on('message', (message) => {
         break;
       case 'bye':
         rtm.sendMessage('bye~ bye~', channel);
+        console.log('서버 종료');
+        process.exit(1);
         break;
       default:
         rtm.sendMessage('I am alive~', channel);
