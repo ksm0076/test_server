@@ -1,7 +1,14 @@
+function sq(n) {
+  return n * n;
+}
+
 const square = function (rtm, text, channel) {
   console.log('제곱을 실시합니다.');
   console.log(text);
-  rtm.sendMessage(`The result is ${text * text}`, channel);
+  rtm.sendMessage(`The result is ${sq(text)}`, channel);
 };
 
-module.exports = square;
+module.exports = {
+  square,
+  sq,
+};

@@ -27,7 +27,7 @@ rtm.on('message', (message) => {
   const { text } = message;
 
   if (!isNaN(text)) {
-    square(rtm, text, channel);
+    square.square(rtm, text, channel);
   } else {
     switch (text) {
       case 'hi':
