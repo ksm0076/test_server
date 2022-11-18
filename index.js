@@ -21,6 +21,7 @@ rtm.start();
 
 const greeting = require('./greeting');
 const square = require('./square');
+const menu = require('./menu');
 
 rtm.on('message', (message) => {
   const { channel } = message;
@@ -37,6 +38,9 @@ rtm.on('message', (message) => {
         rtm.sendMessage('bye~ bye~', channel);
         console.log('서버 종료');
         process.exit(1);
+        break;
+      case '밥':
+        menu.menu(rtm, channel);
         break;
       default:
         rtm.sendMessage('I am alive~', channel);
