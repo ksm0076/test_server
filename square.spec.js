@@ -1,5 +1,5 @@
 const assert = require('assert');
-const square  = require('./square');
+const square = require('./square');
 
 describe('Square test!', () => {
   it('Test - Square should return x*x', (done) => {
@@ -7,4 +7,3 @@ describe('Square test!', () => {
     done();
   });
 });
-

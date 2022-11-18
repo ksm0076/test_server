@@ -16,5 +16,7 @@ module.exports = {
     'no-restricted-globals': 'off',
     'import/no-unresolved': 'off',
     'no-undef': 'off',
+    camelcase: 'off',
+    'no-plusplus': 'off',
   },
 };
