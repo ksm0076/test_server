@@ -18,10 +18,12 @@ const d = new Date();
 console.log(d.getDay());
 
 const url = 'https://sobi.chonbuk.ac.kr/menu/week_menu.php';
-const selector = `#contents > div.contentsArea.WeekMenu > div:nth-child(227) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(${d.getDay()}${3}) > ul > li`;
+const selector = `#contents > div.contentsArea.WeekMenu > div:nth-child(227) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(${d.getDay() + 2}) > ul > li`;
+console.log(selector);
 
 function menu(rtm, channel) {
   if (d.getDay() === 6 || d.getDay() === 7) { // 주말이면
+    rtm.sendMessage('주말은 쉽니다.', channel);
     console.log('주말은 쉽니다.');
   } else {
     webScraping(url, selector).then((res) => {
