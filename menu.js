@@ -14,18 +14,22 @@ async function webScraping(url, selector) {
   return res;
 }
 
+const d = new Date();
+console.log(d.getDay());
+
 const url = 'https://sobi.chonbuk.ac.kr/menu/week_menu.php';
-const selector = '.tblType03 tbody td';
+const selector = `#contents > div.contentsArea.WeekMenu > div:nth-child(227) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(${d.getDay()}${3}) > ul > li`;
 
 function menu(rtm, channel) {
-  const d = new Date();
-  console.log(d.getDay());
-
   if (d.getDay() === 6 || d.getDay() === 7) { // 주말이면
     console.log('주말은 쉽니다.');
   } else {
     webScraping(url, selector).then((res) => {
-      rtm.sendMessage(res[d.getDay() - 1], channel);
+      for (let i = 0; i < res.length; i++) {
+        if (res[i] !== '') {
+          rtm.sendMessage(res[i], channel);
+        }
+      }
     });
   }
 }
