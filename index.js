@@ -40,7 +40,7 @@ rtm.on('message', (message) => {
         process.exit(1);
         break;
       case '밥':
-        menu.menu(rtm, channel);
+        menu(rtm, channel);
         break;
       default:
         rtm.sendMessage('I am alive~', channel);
