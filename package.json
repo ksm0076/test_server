@@ -14,7 +14,7 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "test": "mocha ./hello.spec.js ./square.spec.js"
+    "test": "mocha ./hello.spec.js ./square.spec.js ./greeting.spec.js"
   },
   "name": "ksm-server",
   "version": "1.0.0",

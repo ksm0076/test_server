@@ -5,11 +5,12 @@ function randomNum(min, max) {
 
 const reply = ['Hello!', 'Bongjur!', 'Nihao!'];
 
-function greeting(rtm, channel) {
+function greeting() {
   console.log('인사를 합시다.');
   const n = randomNum(0, 2);
-  console.log(`n값 : ${n}`);
-  rtm.sendMessage(reply[n], channel);
+  // rtm.sendMessage(reply[n], channel);
+
+  return reply[n];
 }
 
 module.exports = greeting;

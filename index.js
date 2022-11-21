@@ -19,7 +19,7 @@ token = token.replace(/\n/g, '');
 const rtm = new RTMClient(token);
 rtm.start();
 
-const greeting = require('./greeting');
+const greeting = require('./greeting').default;
 const square = require('./square');
 const menu = require('./menu');
 
@@ -32,7 +32,7 @@ rtm.on('message', (message) => {
   } else {
     switch (text) {
       case 'hi':
-        greeting(rtm, channel);
+        rtm.sendMessage(greeting(), channel);
         break;
       case 'bye':
         rtm.sendMessage('bye~ bye~', channel);
